@@ -1,0 +1,14 @@
+Wed Apr 28 15:01:59 EDT 2021 Starting job
+Read 2592 pq files to 320 processes in 4.483230829238892 secs.
+Collected stats to rank 0 in 1.4518036842346191 secs.
+              atoms          tors  ...            v2            r3
+count  1.377504e+09  1.377504e+09  ...  1.377504e+09  1.377504e+09
+min    1.000000e+00  0.000000e+00  ...  5.700309e+00  3.132741e+00
+max    4.300000e+01  1.900000e+01  ...  6.986476e+00  8.534817e+00
+avg    2.632986e+01  6.143596e+00  ...  5.998129e+00  6.092471e+00
+
+[4 rows x 13 columns]
+Collected histogram1 in 0.47638630867004395 secs.
+Collected histogram2 in 0.41737794876098633 secs.
+Collected histogram3 in 0.4152705669403076 secs.
+Wed Apr 28 15:02:13 EDT 2021 Completed job

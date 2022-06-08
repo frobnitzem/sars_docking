@@ -1,0 +1,9 @@
+Wed May 5 18:00:44 EDT 2021 Starting job
+Read 2592 pq files to 320 processes in 4.499540328979492 secs.
+Collected 10277 records in AD in 0.37523579597473145 secs.
+Collected 12005 records in rf3 in 0.11226511001586914 secs.
+Collected 12364 records in ADrf3 in 0.11500978469848633 secs.
+Collected 12692 records in v2rf3 in 0.11555004119873047 secs.
+Collected 11869 records in v2AD in 0.1143486499786377 secs.
+Collected 10901 records in rand in 11.567055702209473 secs.
+Wed May 5 18:01:07 EDT 2021 Completed job

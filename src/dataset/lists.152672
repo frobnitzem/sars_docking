@@ -1,0 +1,16 @@
+Thu Nov 18 11:48:16 EST 2021 Starting job
+Read 2049 pq files to 1024 processes in 2.203939199447632 secs.
+Collected 11804 records in AD in 0.5281808376312256 secs.
+Collected 10530 records in rf3 in 0.42012929916381836 secs.
+Collected 10153 records in ADrf3 in 0.39713501930236816 secs.
+Collected 12128 records in v2rf3 in 0.3977069854736328 secs.
+Collected 11979 records in v2AD in 0.39870667457580566 secs.
+Collected 12560 records in rand in 6.461712598800659 secs.
+Read 2048 pq files to 1024 processes in 1.5412673950195312 secs.
+Collected 11679 records in AD in 0.4981818199157715 secs.
+Collected 16604 records in rf3 in 0.4308433532714844 secs.
+Collected 13462 records in ADrf3 in 0.40822911262512207 secs.
+Collected 11858 records in v2rf3 in 0.42318105697631836 secs.
+Collected 10271 records in v2AD in 0.40557336807250977 secs.
+Collected 10852 records in rand in 3.6016390323638916 secs.
+Thu Nov 18 11:49:28 EST 2021 Completed job

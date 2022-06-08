@@ -1,0 +1,17 @@
+Thu Nov 18 11:53:35 EST 2021 Starting job
+Read 1368239998 molecules in 53.443458795547485 secs.
+Filtered 1539 molecules from AD.pq in 2.1909537315368652 secs.
+Filtered 1162 molecules from rf3.pq in 1.7962181568145752 secs.
+Filtered 1309 molecules from ADrf3.pq in 1.763375997543335 secs.
+Filtered 1251 molecules from v2AD.pq in 1.814518928527832 secs.
+Filtered 1035 molecules from v2rf3.pq in 1.8237788677215576 secs.
+Filtered 2219 molecules from rand.pq in 1.81490159034729 secs.
+Error reading /gpfs/alpine/world-shared/stf006/rogersdd/docking/RDRP/docked/1907.pq: Could not open parquet input source '<Buffer>': Invalid: Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
+Read 1367945966 molecules in 67.2136561870575 secs.
+Filtered 2057 molecules from AD.pq in 0.9431421756744385 secs.
+Filtered 1832 molecules from rf3.pq in 0.8473923206329346 secs.
+Filtered 1838 molecules from ADrf3.pq in 0.836787223815918 secs.
+Filtered 1500 molecules from v2AD.pq in 0.7924695014953613 secs.
+Filtered 288 molecules from v2rf3.pq in 0.8130836486816406 secs.
+Filtered 1346 molecules from rand.pq in 0.8037252426147461 secs.
+Thu Nov 18 11:56:09 EST 2021 Completed job
