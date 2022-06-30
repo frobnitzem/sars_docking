@@ -28,8 +28,8 @@ def n_docked(prot):
 
 def read_pq(name):
     try:
-        df = [pd.read_parquet(name)]
-        #df = [LazyDataFrame(name)]
+        #df = [pd.read_parquet(name)]
+        df = [LazyDataFrame(name)]
     except Exception as e:
         print(f"Error reading {name}: {e}")
         df = []

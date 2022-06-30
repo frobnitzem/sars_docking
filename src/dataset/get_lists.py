@@ -7,10 +7,23 @@ data = Path("/gpfs/alpine/world-shared/stf006/rogersdd/docking")
 
 cols = ['atoms', 'tors', 'score', 'score2', 'score3', 'conf', 'conf2', 'conf3']
 
+class Joiner:
+    def __init__(self, lst):
+        self.lst = lst
+    def access(self, df):
+        if 'name' in df.columns:
+            df.set_index('name', inplace=True)
+
+        return df.join(self.lst, how='inner')
+    def __call__(self, ldf):
+        return ldf(self.access)
+
 def main(argv):
     assert len(argv) >= 4, f"Usage: {argv[0]} <N> <prot> <list1> <...>"
     N = int(argv[1])
     prot = Path(argv[2])
+    if N == 0:
+        N = n_docked(str(prot))
 
     C = Context()
     if C.rank == 0:
@@ -37,8 +50,9 @@ def main(argv):
         # get rid of columns we already know
         lst.drop(cols, axis=1, inplace=True, errors='ignore')
 
+                #. map(lambda ldf: ldf( F.join(lst, how='inner') )) \
         ans = dfm \
-                . map(F.join(lst, how='inner')) \
+                . map( Joiner(lst) ) \
                 . nodeMap(lambda rank,E: [concatDF(E)]) \
                 . collect()
         t2 = time()
