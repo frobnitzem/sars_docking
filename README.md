@@ -15,7 +15,7 @@ It has also been released by its authors under a [Creative Commons Attribution 4
 
 ## Layout
 
-The top-level directory contains protein names, like `MPro\_6WQF`, as its
+The top-level directory contains protein names, like `MPro_6WQF`, as its
 subdirectories.  It also contains common information, like `src`,
 holding processing files.
 
@@ -70,7 +70,7 @@ holding processing files.
 
 ## Cite this work as:
 
-SARS Cov2 Docking Summary Data, "https://github.com/frobnitzem/sars\_docking" Oak Ridge National Laboratory / CC-BY-4.0, 2020-2022.
+SARS Cov2 Docking Summary Data, "https://github.com/frobnitzem/sars_docking" Oak Ridge National Laboratory / CC-BY-4.0, 2020-2022.
 
 or
 
