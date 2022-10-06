@@ -63,6 +63,7 @@ holding processing files.
   - lists.sh, sublists.py, lists.000 - Create sub-lists of the score dataset based on score selection.  These are used as input to get\_lists.py.
   - top.sh, top\_andes.sh, get\_lists.py, topN.000 - batch script, source file, and example job output for extracting compounds by full name (including \_T\_0 suffix).
   - summary.sh, summary.py, summary.52533 - batch script, source file, and example output for creating bounds and summary histograms for dataset
+  - atoms\_tors.sh, atoms\_tors.py, atoms\_tors.000 - batch script, source file, and example output for creating histograms of atoms and torsions
 
 
 ## Cite this work as:
