@@ -26,22 +26,24 @@ def n_docked(prot):
        RDRP=8193)
     return docked[prot]
 
-def read_pq(name):
+def read_pq(name, lazy=False):
     try:
-        #df = [pd.read_parquet(name)]
-        df = [LazyDataFrame(name)]
+        if lazy:
+            df = [LazyDataFrame(name)]
+        else:
+            df = [pd.read_parquet(name)]
     except Exception as e:
         print(f"Error reading {name}: {e}")
         df = []
     return df
 
-def read_docked(data, prot, n):
+def read_docked(data, prot, n, lazy=True):
     name = data / prot / 'docked' / f"{n}.pq"
-    return read_pq(name)
+    return read_pq(name, lazy)
 
-def read_scored(data, prot, n):
+def read_scored(data, prot, n, lazy=False):
     name = data / prot / 'scored' / f"{n}.pq"
-    return read_pq(name)
+    return read_pq(name, lazy)
 
 def best_scores(df):
     df['v2'] = df[['vs_dude_v2','vs_dude_v22','vs_dude_v23']].max(axis=1)

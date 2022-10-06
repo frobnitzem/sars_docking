@@ -30,13 +30,15 @@ def guess_sl(z):
 def plot(H, x0, y0, loc=None):
     dim0, dim1 = H.dims
     fig, ax = plt.subplots(figsize=(4.5,3.5))
-    np.log(H+0.5).plot(ax=ax)
+    #np.log(H+0.5).plot(ax=ax)
+    xr.plot.imshow(np.log(H+0.5), ax=ax, zorder=-1)
 
     if x0 is not None:
-        plt.axhline(x0, color='black', linewidth=1)
+        plt.axhline(x0, color='black', linewidth=1, zorder=1)
     if y0 is not None:
-        plt.axvline(y0, color='black', linewidth=1)
+        plt.axvline(y0, color='black', linewidth=1, zorder=1)
 
+    plt.tight_layout()
     if loc:
         plt.savefig(loc / f'{dim0}-{dim1}.pdf')
 
@@ -56,7 +58,7 @@ def main(argv):
     plt.clf()
 
     H = read_counts(loc / "tors_score.nc").sel(tors=slice(None, 20))
-    plot(H, None, None, loc)
+    plot(H, None, cutoff, loc)
     plt.clf()
 
     return 0

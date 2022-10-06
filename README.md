@@ -65,7 +65,13 @@ holding processing files.
   - summary.sh, summary.py, summary.52533 - batch script, source file, and example output for creating bounds and summary histograms for dataset
   - atoms\_tors.sh, atoms\_tors.py, atoms\_tors.000 - batch script, source file, and example output for creating histograms of atoms and torsions
 
+* dash - a (plotly/dash)[https://dash.plotly.com] viewer for docked structures and scores
+
 
 ## Cite this work as:
 
-SARS Cov2 Docking Summary Data, "https://code.ornl.gov/99R/sars\_docking" Oak Ridge National Laboratory / CC-BY-4.0, 2020-2022.
+SARS Cov2 Docking Summary Data, "https://github.com/frobnitzem/sars\_docking" Oak Ridge National Laboratory / CC-BY-4.0, 2020-2022.
+
+or
+
+Rogers, Agarwal, Agarwal, et. al., "SARS-CoV2 Billion-Compound Docking." Scientific Data, 2022.
