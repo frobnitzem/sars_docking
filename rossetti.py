@@ -50,4 +50,31 @@ if __name__=="__main__":
     import sys
     
     r, q = read_lists()
-    print(q.groupby('color').count())
+    print("5R84 type counts")
+    print(r.groupby('color').count()['atoms'])
+    print("6WQF type counts")
+    print(q.groupby('color').count()['atoms'])
+
+    scores = [["score", "rf3", "vs_dude_v2"],
+              ["score2", "rf32", "vs_dude_v22"],
+              ["score3", "rf33", "vs_dude_v23"]]
+    names = ["score", "r3", "v2"]
+    # extract columns labeled "old" and rename to "new"
+    # set 'name' column to old index
+    # also include 'color' column
+    # optionally include an 'n' column
+    def extract_rename(df, old, new, n=None):
+        lst = {'color': df['color'].values,
+               'name': df.index
+              }
+        for i,j in zip(old, new):
+            lst[j] = df[i].values
+        df = pd.DataFrame(lst)
+        if n is not None:
+            df['n'] = n
+        return df
+    def expand(df):
+        return pd.concat([extract_rename(df, s, names, i)
+                          for i,s in enumerate(scores)])
+    expand(r).to_csv("5R84_special.csv")
+    expand(q).to_csv("6WQF_special.csv")
