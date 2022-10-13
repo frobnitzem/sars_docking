@@ -50,7 +50,7 @@ def plot(H, x0, y0, xy, loc=None, points=None):
         #ax.imshow(ar, alpha=0.5, cmap="RdBu")
 
     if points is not None:
-        # Doesn't show up. Have to plot separately :(
+        # Doesn't show up using x,y order -- xr swaps axes!!!
         for c, (name,style) in markers.items():
             u = points.loc[points['color'] == c]
             ax.scatter(u[dim1], u[dim0],

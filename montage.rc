@@ -1,0 +1,25 @@
+#!/usr/bin/env rc
+
+prots=(MPro_5R84 MPro_6WQF PLPro_7JIR NSP15_6WLC Spike_6M0J RDRP)
+
+files=(score-r3 v2-score v2-r3)
+args=()
+for(prot in $prots) {
+  name=`{echo $prot | sed -e 's/_/ /'}
+  args=($args -label $"name)
+  for(file in $files) {
+    args=($args $prot/docked/$file.pdf)
+  }
+}
+montage $args -tile 3x6 -geometry +0+0 scorehist.pdf
+
+files=(atoms-tors atoms-score tors-score)
+args=()
+for(prot in $prots) {
+  name=`{echo $prot | sed -e 's/_/ /'}
+  args=($args -label $"name)
+  for(file in $files) {
+    args=($args $prot/docked/$file.pdf)
+  }
+}
+montage $args -tile 3x6 -geometry +0+0 prophist.pdf

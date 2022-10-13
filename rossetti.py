@@ -65,7 +65,9 @@ if __name__=="__main__":
     # optionally include an 'n' column
     def extract_rename(df, old, new, n=None):
         lst = {'color': df['color'].values,
-               'name': df.index
+               'name': df.index,
+               'atoms': df['atoms'].values,
+               'tors': df['tors'].values,
               }
         for i,j in zip(old, new):
             lst[j] = df[i].values
