@@ -4,8 +4,14 @@ import pandas as pd
 import parmed as pmd
 
 from dash import html
-from dash_bio_utils import PdbParser, create_mol3d_style
-#from dash_bio_utils.mol3dviewer_styles_creator import ATOM_COLORS
+try:
+    from dash_bio.utils import PdbParser, create_mol3d_style
+except ImportError:
+    from dash_bio_utils import PdbParser, create_mol3d_style
+try:
+    from dash_bio.utils.mol3dviewer_styles_creator import ATOM_COLORS
+except ImportError:
+    ATOM_COLORS = None
 
 def make_dash_table(header, cells):
     """ Return a dash defintion of an HTML table from column-formatted data.
@@ -49,7 +55,8 @@ def style_protein(atoms):
 def style_ligand(atoms, c_color=None):
     styles = []
     for a in atoms:
-        #color = ATOM_COLORS.get(a['elem'], '#AB3340')
+        if ATOM_COLORS is not None:
+            color = ATOM_COLORS.get(a['elem'], '#AB3340')
         color = '#AB3340'
         if c_color is not None and a['elem'] == 'C':
             color = c_color
